@@ -2,7 +2,7 @@
 -- Turn off autocommit and start a transaction so that we can use the temp tables
 --
 
-SET AUTOCOMMIT FALSE;
+SET AUTOCOMMIT = 0;
 
 START TRANSACTION;
 
@@ -65,5 +65,5 @@ MERGE INTO client_grant_type
     
 COMMIT;
 
-SET AUTOCOMMIT TRUE;
+SET AUTOCOMMIT = 1;
 
